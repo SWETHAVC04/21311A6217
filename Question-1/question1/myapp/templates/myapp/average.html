@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Average</title>
+</head>
+<body>
+    <h1>Enter 10 Numbers to Calculate the Average</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Calculate</button>
+    </form>
+    <br>
+    {% if average %}
+        <h2>Average: {{ average }}</h2>
+    {% endif %}
+</html>
